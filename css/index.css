@@ -1,33 +1,533 @@
 * {
   box-sizing: border-box;
 }
-.container {
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.25;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.font-12 {
+  font-size: 12px !important;
+  line-height: 1.5;
+}
+.font-light {
+  font-weight: 300;
+}
+.font-bold {
+  font-weight: 700;
+}
+.content-container {
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1120px;
+  width: 90%;
+}
+.circle {
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  display: block;
+  height: 14px;
+  margin: 0 auto;
+  width: 14px;
+}
+.background-red {
+  background-color: rgb(204, 0, 0);
+}
+.background-yellow {
+  background-color: rgb(250, 178, 50);
+}
+.background-blue {
+  background-color: rgb(42, 131, 262);
+}
+@media screen and (max-width: 660px) {
+  .mbl-hide {
+    display: none;
+  }
 }
 
-/* header */
-header {
-  padding: 26px 0 22px;
-  border: 2px solid fuchsia;
-}
+/*__________________________ header __________________________*/
 header .logo {
-  max-width: 156px;
-  width: 100%;
   margin: 0 auto;
-  border: 2px solid fuchsia;
+  max-width: 156px;
+  padding: 26px 0 22px;
+  width: 100%;
 }
 header .logo img {
   width: 100%;
 }
-header .background-image {
-  border: 1px solid red;
-  background-image: url('../img/header-background-image.jpg');
-  background-size: cover;
+header .background-image-container {
+  background-color: rgb(0, 0, 0);
+  background-image: url('../img/hero-background-image-mobile.png');
+  background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
   height: auto;
+  overflow: hidden;
 }
+
 header p {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  letter-spacing: 0.1px;
+  text-align: left;
+}
+header p:first-child {
+  font-size: 24px;
+  letter-spacing: 0.6px;
+  margin: 60px 0 20px;
+}
+header p:nth-child(2) {
+  font-size: 48px;
+  letter-spacing: 0.4px;
+}
+header button {
+  background-color: rgb(204, 0, 0);
+  border: 0;
+  box-shadow: 0;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  margin: 40px 0 156px;
+  outline: 0;
+  text-align: center;
+  width: 177px;
+}
+@media screen and (min-width: 800px) {
+  header .background-image-container {
+    background-image: url('../img/hero-background-image.jpg');
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+/*__________________________ main __________________________*/
+/*__________________________ product-cards __________________________*/
+main .product-card-container {
+  margin: 60px auto;
+  width: 90%;
+}
+main .product-card {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 10px 12px 0 rgba(197, 187, 187, 0.5);
+  margin: 0 auto;
+  max-width: 414px;
+}
+main .product-card {
+  text-align: center;
+  width: 100%;
+}
+main .maximum-security {
+  border-top: 7px solid rgb(204, 0, 0);
+}
+main .internet-security,
+main .antivirus-security {
+  margin-top: 50px;
+}
+main .internet-security {
+  border-top: 7px solid rgb(250, 178, 50);
+}
+main .antivirus-security {
+  border-top: 7px solid rgb(42, 131, 162);
+}
+main .product-card-header p {
+  color: rgba(204, 0, 0);
+  font-size: 24px;
+  font-weight: 700;
+  margin: 11px 0 13px;
+}
+main .product-card-header span {
+  background: rgba(0, 0, 0);
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.16));
+  display: block;
+  height: 2px;
+}
+main .product-card-body {
+  padding: 33px 0 50px;
+  color: rgb(51, 51, 51);
+  margin: 0 auto;
+  width: 90%;
+}
+main .product-card-body p {
+  font-size: 18px;
+  font-weight: 600;
+}
+main .product-card-body p.product-title {
+  font-size: 36px;
+  letter-spacing: 0.2px;
+  margin-top: 16px;
+}
+main .product-card-body p.price-point {
+  color: rgb(204, 0, 0);
+  font-size: 42px;
+  font-weight: 600;
+  margin-top: 33px;
+}
+main .product-card-body .savings-container {
+  font-size: 24px;
+  margin-top: 27px;
+}
+main .product-card-body .savings-container span {
+  display: inline-block;
+  width: 40%;
+}
+main .product-card-body .savings-container span:first-child {
+  font-weight: 300;
+  text-decoration: line-through;
+}
+main .product-card-body .savings-container span:nth-child(2) {
+  font-weight: 700;
+}
+main .product-card-body button {
+  background-color: rgb(204, 0, 0);
+  border: 0;
+  box-shadow: 0;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  max-width: 320px;
+  margin-top: 35px;
+  outline: 0;
+  text-align: center;
+  width: 100%;
+}
+@media screen and (min-width: 800px) {
+  main .product-card-container {
+    align-items: flex-start;
+    display: flex;
+    margin: 0 auto;
+    margin-top: -31px;
+    max-width: 1159px;
+    justify-content: center;
+    width: 100%;
+  }
+  main .maximum-security,
+  main .antivirus-security,
+  main .internet-security {
+    margin-top: 0;
+  }
+  main .maximum-security {
+    order: 2;
+    margin-top: -28px;
+    width: 40%;
+    z-index: 10;
+  }
+  main .internet-security {
+    margin-right: -24px;
+    order: 1;
+    width: 30%;
+  }
+  main .antivirus-security {
+    margin-left: -24px;
+    order: 3;
+    width: 30%;
+  }
+  main .product-card-body {
+    width: 80%;
+  }
+  main .maximum-security .product-card-body {
+    padding-bottom: 65px;
+  }
+}
+
+/*__________________________ awards __________________________*/
+main .awards-section {
+  background-color: rgb(242, 242, 242);
+  padding: 60px 0 77px;
+  margin-top: 60px;
+  text-align: center;
+}
+main .awards-section p {
+  color: rgb(51, 51, 51);
+  font-size: 32px;
+  font-weight: 300;
+}
+main .awards-section p span {
+  color: rgb(204, 0, 0);
+}
+main .awards-section .content-container div {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 39px;
+  max-width: 700px;
+}
+main .awards-section .content-container .av-test {
+  max-width: 128px;
+  width: 33%;
+}
+main .awards-section .content-container .pcmag {
+  max-width: 1114px;
+  width: 33%;
+}
+main .awards-section .content-container .cnet {
+  max-width: 67px;
+  width: 33%;
+}
+@media screen and (min-width: 800px) {
+  main .awards-section {
+    margin-top: 120px;
+  }
+  main .awards-section .content-container .av-test {
+    max-width: 211px;
+  }
+  main .awards-section .content-container .pcmag {
+    max-width: 188px;
+  }
+  main .awards-section .content-container .cnet {
+    max-width: 110px;
+  }
+}
+
+/*__________________________ compare-products __________________________*/
+main .compare-products-section {
+  margin: 60px auto;
+}
+main .compare-products-section p {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 40px;
+  text-align: center;
+}
+main .compare-products-section p span {
+  color: rgb(204, 0, 0);
+}
+main .compare-products-section table {
+  margin: 0 auto;
+  width: 98%;
+  max-width: 1140px;
+}
+main .compare-products-section tr th {
+  width: 21%;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+main .compare-products-section tr th:first-of-type {
+  background-color: rgb(255, 255, 255);
+  width: 37%;
+}
+main .compare-products-section tr:nth-child(odd) td,
+main .compare-products-section tr:nth-child(odd) th {
+  background-color: rgb(242, 242, 242);
+}
+main .compare-products-section tr:nth-child(even) td {
+  background-color: rgb(248, 248, 248);
+}
+main .compare-products-section td,
+main .compare-products-section th {
+  border: 2px solid rgb(255, 255, 255);
+  font-size: 13px;
+  text-align: center;
+}
+main .compare-products-section td {
+  padding: 10px 5px;
+}
+main .compare-products-section td:first-of-type {
+  text-align: left;
+}
+main .compare-products-section .device-number {
+  font-size: 20px;
+  font-weight: 400;
+}
+main .compare-products-section td p {
+  font-size: 14px;
+  margin: 0;
+}
+
+main .compare-products-section td button {
+  background-color: rgb(204, 0, 0);
+  border: 0;
+  box-shadow: 0;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  margin: 20px 0 20px;
+  outline: 0;
+  text-align: center;
+  width: 177px;
+}
+main .compare-products-section .price {
+  color: rgb(204, 0, 0);
+  font-size: 36px;
+  padding-top: 20px;
+}
+main .compare-products-section .device-type {
+  font-size: 12px;
+}
+main .compare-products-section .strike-through-price {
+  font-size: 24px;
+  text-decoration: line-through;
+}
+
+main .compare-products-section .yellow-bar,
+main .compare-products-section .blue-bar,
+main .compare-products-section .red-bar {
+  display: block;
+  height: 2px;
+  padding-bottom: 15px;
+}
+main .compare-products-section .red-bar {
+  border-top: 4px solid rgb(204, 0, 0);
+}
+main .compare-products-section .yellow-bar {
+  border-top: 4px solid rgb(250, 178, 50);
+}
+main .compare-products-section .blue-bar {
+  border-top: 4px solid rgb(42, 131, 262);
+}
+@media screen and (min-width: 768px) {
+  main .compare-products-section td {
+    padding: 20px 15px;
+  }
+  main .compare-products-section td,
+  main .compare-products-section th {
+    font-size: 18px;
+  }
+  main .compare-products-section .device-number {
+    font-size: 24px;
+  }
+  main .compare-products-section tr th {
+    font-weight: 400;
+  }
+  main .compare-products-section .device-type {
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+/*__________________________ money-back-gaurantee __________________________*/
+main .money-back-gaurantee-section {
+  background-color: rgb(42, 131, 162);
+  color: rgb(255, 255, 255);
+  margin-top: 60px;
+  padding-top: 50px;
+  text-align: center;
+}
+main .money-back-gaurantee-section figure.icon {
+  margin: 0 auto;
+  width: 82px;
+}
+main .money-back-gaurantee-section p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+main .money-back-gaurantee-section p:first-of-type {
+  font-size: 32px;
+  margin-top: 30px;
+}
+main .money-back-gaurantee-section .poly-img {
+  margin-top: 45px;
+}
+@media screen and (min-width: 800px) {
+  main .money-back-gaurantee-section .poly-img {
+    margin-top: 95px;
+  }
+}
+
+/*__________________________ footer__________________________*/
+footer {
+  background-color: rgb(51, 51, 51);
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  margin-top: 81px;
+}
+footer .content-container {
+  padding: 40px 0 65px;
+}
+footer .content-container .footer-nav-social {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 380px;
+}
+footer .content-container .footer-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+footer .content-container .footer-nav p {
+  width: 33%;
+  text-align: center;
+}
+footer .content-container .footer-nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+footer .content-container .footer-icons {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: 40px 0 50px;
+}
+footer .content-container .footer-icons .twitter {
+  width: 48px;
+}
+footer .content-container .footer-icons .linkedin {
+  width: 39px;
+}
+footer .content-container .footer-icons .youtube {
+  width: 34px;
+}
+footer .content-container .footer-icons .facebook {
+  width: 18px;
+}
+footer .content-container .footer-icons .rss {
+  width: 39px;
+}
+footer .content-container .terms {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+footer .content-container .terms p {
+  font-size: 14px;
+  line-height: 20px;
+  padding-right: 12px;
+  text-align: left;
+  width: 80%;
+}
+footer .content-container .terms figure {
+  width: 20%;
+  max-width: 90px;
+}
+@media screen and (min-width: 768px) {
+  footer .content-container .footer-nav-social-terms-container {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer .content-container .footer-nav-social {
+    margin: 0;
+    width: 30%;
+  }
+  footer .content-container .footer-icons {
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  footer .content-container .terms {
+    margin-top: 0;
+    width: 60%;
+    align-items: flex-end;
+  }
+  footer .content-container .terms p {
+    text-align: right;
+    padding-right: 22px;
+    width: 85%;
+  }
+  footer .content-container .terms figure {
+    width: 15%;
+  }
 }
